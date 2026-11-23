@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vũ Ngọc Khánh Trung | Portfolio Sinh viên CNTT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Vùng đầu trang & Điều hướng -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Khánh Trung<span class="accent">.dev</span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#ky-nang">Kỹ năng</a>
+        <a href="#du-an">Dự án</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Vùng nội dung chính -->
+  <main>
+    <!-- Phần 1: Giới thiệu bản thân -->
+    <section id="gioi-thieu" class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="badge">Sinh viên năm nhất • Lớp CNTT 20-04</p>
+          <h1>Xin chào, mình là Vũ Ngọc Khánh Trung</h1>
+          <p class="lead">
+            Mã sinh viên: <strong>2071020209</strong> – Khoa Công nghệ Thông tin, Đại học Đại Nam. 
+            Mình đang tập trung xây dựng nền tảng lập trình Web chuẩn HTML5/CSS3, tư duy thiết kế giao diện thân thiện và quy trình quản lý mã nguồn chuyên nghiệp với Git/GitHub.
+          </p>
+          <div class="hero-actions">
+            <a href="#du-an" class="button button-primary">Xem dự án thực hành</a>
+            <a href="#lien-he" class="button button-outline">Kết nối với mình</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img 
+            src="assets/images/avatar.svg" 
+            alt="Ảnh minh họa chân dung Vũ Ngọc Khánh Trung - Sinh viên CNTT" 
+            width="240" 
+            height="240" 
+            class="avatar"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 2: Kỹ năng & Công cụ -->
+    <section id="ky-nang" class="section bg-alt">
+      <div class="container">
+        <h2>Kỹ năng &amp; Công cụ đang rèn luyện</h2>
+        <p class="section-desc">Các kiến thức nền tảng tích lũy qua học phần Thiết kế Web và Triển khai hệ thống phần mềm (FIT4014).</p>
+        <div class="skills-grid">
+          <article class="skill-box">
+            <h3>HTML5 &amp; Semantic</h3>
+            <ul>
+              <li>Xây dựng khung trang chuẩn ngữ nghĩa (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>footer</code>).</li>
+              <li>Tối ưu khả năng truy cập (Accessibility) và form có ràng buộc dữ liệu.</li>
+            </ul>
+          </article>
+          <article class="skill-box">
+            <h3>CSS3 &amp; Responsive</h3>
+            <ul>
+              <li>Áp dụng Box Model (<code>border-box</code>), biến CSS (Design Tokens).</li>
+              <li>Dàn trang linh hoạt với Flexbox, CSS Grid và tư duy Mobile-first.</li>
+            </ul>
+          </article>
+          <article class="skill-box">
+            <h3>Git &amp; Triển khai</h3>
+            <ul>
+              <li>Quản lý phiên bản cục bộ bằng các lệnh Git cơ bản và gắn Tag phát hành.</li>
+              <li>Đưa website tĩnh lên môi trường thực tế qua GitHub Pages.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 3: Dự án tiêu biểu -->
+    <section id="du-an" class="section">
+      <div class="container">
+        <h2>Dự án thực hành tiêu biểu</h2>
+        <p class="section-desc">Quá trình nâng cấp sản phẩm từ những dòng mã đầu tiên đến phiên bản hoàn chỉnh.</p>
+        
+        <div class="projects-grid">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">Lab 1 – Lab 2</span>
+              <h3>Trang Profile Cá nhân V2</h3>
+              <p>Xây dựng cấu trúc thư mục chuẩn kebab-case, áp dụng đầy đủ thẻ ngữ nghĩa HTML5 và kiểm thử DOM bằng Chrome DevTools.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#lien-he" class="card-link">Tìm hiểu chi tiết →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">Lab 3 – Lab 4</span>
+              <h3>Giao diện Responsive V4</h3>
+              <p>Thiết kế hệ thống lưới tự thích nghi từ màn hình 320px đến 1440px, loại bỏ hoàn toàn lỗi cuộn ngang và tràn đường dẫn.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#lien-he" class="card-link">Tìm hiểu chi tiết →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">Lab 5 – Lab 8</span>
+              <h3>Portfolio Hoàn chỉnh &amp; UX Form</h3>
+              <p>Bổ sung phản hồi tương tác bàn phím (<code>:focus-visible</code>), kiểm tra hợp lệ biểu mẫu liên hệ và triển khai công khai lên GitHub Pages.</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com" target="_blank" rel="noopener" class="card-link">Xem mã nguồn GitHub →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 4: Biểu mẫu liên hệ tĩnh (Bài 5) -->
+    <section id="lien-he" class="section bg-alt">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <h2>Liên hệ với mình</h2>
+          <p>Bạn có góp ý về giao diện hoặc muốn trao đổi học tập? Hãy để lại lời nhắn qua biểu mẫu bên cạnh.</p>
+          <ul class="contact-list">
+            <li><strong>Họ và tên:</strong> Vũ Ngọc Khánh Trung</li>
+            <li><strong>MSV / Lớp:</strong> 2071020209 – CNTT 20-04</li>
+            <li><strong>Đơn vị:</strong> Khoa CNTT – Đại học Đại Nam</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="ket-qua.html" method="get">
+          <div class="form-group">
+            <label for="fullname">Họ và tên (bắt buộc)</label>
+            <input 
+              type="text" 
+              id="fullname" 
+              name="fullname" 
+              placeholder="Ví dụ: Nguyễn Văn An"
+              autocomplete="name"
+              required 
+              minlength="2" 
+              maxlength="80"
+              aria-describedby="fullname-help"
+            >
+            <p id="fullname-help" class="help">Nhập từ 2 đến 80 ký tự.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (bắt buộc)</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Ví dụ: an@example.com"
+              autocomplete="email"
+              required 
+              aria-describedby="email-help"
+            >
+            <p id="email-help" class="help">Nhập đúng định dạng email cá nhân.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Nội dung lời nhắn (bắt buộc)</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              placeholder="Nhập nội dung bạn muốn trao đổi..."
+              required 
+              minlength="10" 
+              maxlength="500"
+              aria-describedby="message-help"
+            ></textarea>
+            <p id="message-help" class="help">Nhập từ 10 đến 500 ký tự. (Lưu ý: Form tĩnh mô phỏng, không gửi email thật).</p>
+          </div>
+
+          <button type="submit" class="button button-primary button-full">Kiểm tra &amp; Gửi biểu mẫu</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vùng chân trang -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Vũ Ngọc Khánh Trung (MSV: 2071020209 – Lớp CNTT 20-04).</p>
+      <p class="footer-note">Bài tập lớn A3 – Học phần Thiết kế Web và Triển khai hệ thống phần mềm (FIT4014).</p>
+    </div>
+  </footer>
+</body>
+</html>
