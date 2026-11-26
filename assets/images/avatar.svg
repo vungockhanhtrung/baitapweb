@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="title desc">
+  <title id="title">Chân dung minh họa Vũ Ngọc Khánh Trung</title>
+  <desc id="desc">Minh họa một sinh viên công nghệ đang mặc áo sơ mi xanh.</desc>
+  <defs>
+    <clipPath id="frame">
+      <circle cx="120" cy="120" r="116"/>
+    </clipPath>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="240" height="240" fill="url(#background)"/>
+    <circle cx="42" cy="48" r="20" fill="#fff" opacity=".32"/>
+    <circle cx="205" cy="74" r="32" fill="#fff" opacity=".18"/>
+    <path d="M32 202h176" stroke="#60a5fa" stroke-width="2" opacity=".55"/>
+
+    <path d="M46 240c2-48 29-78 74-78s72 30 74 78z" fill="#1d4ed8"/>
+    <path d="M96 151h48v27c-3 10-45 10-48 0z" fill="#f0c7a5"/>
+    <path d="M82 91c0-38 22-58 38-58 24 0 42 18 42 53v30c0 31-20 51-42 51-23 0-38-21-38-51z" fill="#f2c9aa"/>
+    <path d="M80 99c-10-28 1-67 38-76 31-7 52 17 49 43-12-10-25-13-43-11-16 2-30 16-44 44z" fill="#17233a"/>
+    <path d="M82 101c-11-8-17 2-13 16 3 12 11 17 17 13m72-29c11-8 17 2 13 16-3 12-11 17-17 13" fill="#f2c9aa"/>
+    <path d="M99 105c5-3 12-3 17 0m10 0c5-3 12-3 17 0" fill="none" stroke="#17233a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="108" cy="116" r="2.5" fill="#17233a"/>
+    <circle cx="136" cy="116" r="2.5" fill="#17233a"/>
+    <path d="M121 119l-4 18h8" fill="none" stroke="#d49b79" stroke-width="2" stroke-linecap="round"/>
+    <path d="M106 145c9 8 21 8 31 0" fill="#fff" stroke="#b96f67" stroke-width="2" stroke-linecap="round"/>
+
+    <path d="M96 174l24 17 24-17 22 66H74z" fill="#2563eb"/>
+    <path d="M120 191l-10-10-18 12 16 47h24l16-47-18-12z" fill="#fff"/>
+    <path d="M120 191v49" stroke="#93c5fd" stroke-width="2"/>
+  </g>
+  <circle cx="120" cy="120" r="116" fill="none" stroke="#bfdbfe" stroke-width="8"/>
+</svg>
