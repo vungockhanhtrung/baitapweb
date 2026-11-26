@@ -1,0 +1,459 @@
+/* 1. Thiết lập nền tảng & Design Tokens */
+:root {
+  --bg-page: #ffffff;
+  --bg-alt: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --accent: #d97706;
+  --border: #e2e8f0;
+  --error: #b91c1c;
+  --radius: 0.5rem;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 20;
+  padding: 0.65rem 1rem;
+  color: #ffffff;
+  background-color: var(--primary);
+  border-radius: var(--radius);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Trạng thái Focus rõ ràng khi điều hướng bàn phím (Bài 5) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 2. Khung chứa linh hoạt (Bài 4) */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.section {
+  padding-block: 3rem;
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* 3. Header & Navigation (Flexbox wrap chống tràn ở 320px) */
+.site-header {
+  background-color: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.brand .accent {
+  color: var(--primary);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.site-nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  padding-block: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.site-nav a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* 4. Hero Section (Mobile-first: 1 cột, ảnh nằm trên chữ) */
+.hero-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #dbeafe;
+  background-color: #eff6ff;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* 5. Buttons & Transitions (Bài 5) */
+.button {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.button-outline {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.button-outline:hover {
+  background-color: #eff6ff;
+}
+
+.button-full {
+  width: 100%;
+}
+
+/* 6. Grid Kỹ năng & Dự án (Mobile-first: 1 cột) */
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.skill-box,
+.card {
+  min-width: 0; /* Ngăn Grid item tràn khi nội dung dài */
+  background-color: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.skill-box ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.skill-box li + li {
+  margin-top: 0.5rem;
+}
+
+/* Card dự án có hiệu ứng nâng nhẹ */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9a4d00;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere; /* Chống tràn URL dài ở 320px */
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* 7. Form liên hệ & UX Validation (Bài 5) */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  color: var(--text-muted);
+}
+
+.contact-list li + li {
+  margin-top: 0.5rem;
+}
+
+.contact-form {
+  background-color: var(--bg-page);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  background-color: #ffffff;
+}
+
+/* Chỉ báo lỗi sau khi người dùng tương tác (Bài 5) */
+input:user-invalid,
+textarea:user-invalid {
+  border: 2px solid var(--error);
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border: 2px solid var(--error);
+}
+
+.help {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+}
+
+/* Trang kết quả mô phỏng */
+.result-box {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg-alt);
+}
+
+.submitted-data {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) 1fr;
+  gap: 0.5rem 1rem;
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+
+.submitted-data dt {
+  font-weight: 700;
+}
+
+.submitted-data dd {
+  margin: 0;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+}
+
+.notice {
+  background-color: #fef3c7;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+
+/* 8. Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-block: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-note {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   9. MEDIA QUERIES (Tăng dần từ nhỏ đến lớn - Bài 4)
+   ========================================================= */
+
+/* B1 = 640px (Đủ chỗ cho 2 cột card: 2*280 + 24 + 2*24 = 632px -> 640px) */
+@media (min-width: 640px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* B2 = 960px (Đủ chỗ cho 3 cột card: 3*280 + 2*24 + 2*24 = 936px -> 960px) */
+@media (min-width: 960px) {
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr 1.25fr;
+    align-items: start;
+  }
+}
